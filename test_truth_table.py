@@ -27,3 +27,8 @@ def test_or(a,b,c):
 @pytest.mark.parametrize("a,b,c",[(0,0,1),(0,1,0),(1,0,0),(1,1,1)])
 def test_or(a,b,c):
     assert xnor_1(a,b)==c
+
+
+
+
+    print("hi")
