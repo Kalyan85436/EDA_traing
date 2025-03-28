@@ -1,0 +1,18 @@
+Test results:
+=====================
+Test inputs: a=False, b=False => expected1=False, expected2=False
+Results: result1=False, result2=False
+Test passed
+
+Test inputs: a=False, b=True => expected1=True, expected2=False
+Results: result1=True, result2=False
+Test passed
+
+Test inputs: a=True, b=False => expected1=True, expected2=False
+Results: result1=True, result2=False
+Test passed
+
+Test inputs: a=True, b=True => expected1=False, expected2=True
+Results: result1=False, result2=True
+Test passed
+
