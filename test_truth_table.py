@@ -1,18 +1,44 @@
 from truth_table import*
 import pytest
 
-def test_and():
-    assert and_gate(0,0) == 0
-    assert and_gate(0,1) == 0
-    assert and_gate(1, 0) == 0
-    assert and_gate(1, 1) == 1
+# @pytest.mark.parametrize("a,b,expected",[
+#     (False, False, False),
+#     (False, True, False),
+#     (True, False, False),
+#     (True, True, True)
+# ])
+# def test_and(a,b,expected):
+#    assert  and_gate(a,b) == expected
+#
+#
+# @pytest.mark.parametrize("a,b,expected",[
+#     (False, False, False),
+#     (False, True, True),
+#     (True, False, True),
+#     (True, True, True)
+# ])
+# def test_or(a,b,expected):
+#     assert or_gate(a,b) == expected
+#
+#
+# def test_not():
+#     assert not_gate(0) == 1
+#     assert  not_gate(1) == 0
 
-def test_or():
-    assert or_gate(0,0) == 0
-    assert or_gate(0,1) == 1
-    assert or_gate(1, 0) == 1
-    assert or_gate(1, 1) == 1
 
-def test_not():
-    assert not_gate(0) == 1
-    assert  not_gate(1) == 0
+@pytest.mark.parametrize("a,b,expected1 expected2",[
+    (False, False, False, False),
+    (False, True, True, False),
+    (True, False, True, False),
+    (True, True, False, True)
+])
+
+def test_half_adder(a,b,expected1,expected2):
+    assert half_adder(a,b) == (expected1,expected2)
+
+
+# def test_half_adder():
+#     assert half_adder(0, 0) == (0,0)
+#     assert half_adder(0, 1) == (1,0)
+#     assert half_adder(1, 0) == (1,0)
+#     assert half_adder(1, 1) == (0,1)
